@@ -45,7 +45,7 @@ namespace Metrica1.Controllers.Admin
         }
 
 
-        public IActionResult DeleteIndex()
+        public IActionResult DeleteI()
         {
 
             var productViewModels = _matricaDbContext.Employees
