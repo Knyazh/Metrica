@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Metrica1.CustomAtributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace Metrica1.Database.Models;
 
@@ -27,7 +28,7 @@ public class Employee
     [Required]
     [RegularExpression(".*@.*", ErrorMessage = "Email must contain the @ character.")]
     public string Email { get; set; }
-    public string ImageURL { get; set; }
+    public string ImageUrl { get; set; }
     public bool IsDeleted { get; set; }
     public int AgencyId { get; set; }
     public Agency Agency { get; set; }

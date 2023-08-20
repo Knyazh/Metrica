@@ -62,10 +62,10 @@
                                 <label>Category</label>
                                 <select class="form-select" asp-for="AgencyId">
                                     <option disabled>Select the category</option>
-                                  @*   @foreach (var category in Model.Departments)
+                                    @foreach (var category in Model.Agencies)
                                     {
                                         <option value="@category.Id">@category.Name</option>
-                                    } *@
+                                    }
                                 </select>
                                 <span asp-validation-for="AgencyId" class="invalid-feedback" style="display:block"></span>
                             </div>
@@ -81,7 +81,7 @@
                             <div class="col-md-6" style="border:1px solid black;">
                                 <div class="mb-3">
                                     <label class="text-danger">Employee's previous photo</label>
-                                    <img src="~/uploads/@Model.ImageURL" style="width:100%; height:200px;" />
+                                    <img src="~/uploads/@Model.ImageUrl" style="width:100%; height:200px;" />
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Metrica1;
+namespace Metrica1.CustomAtributes;
 
 public class PinValidationAttribute : ValidationAttribute
 {

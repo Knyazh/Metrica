@@ -2,6 +2,7 @@
 using Metrica.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Metrica1.Migrations
 {
     [DbContext(typeof(MatricaDbContext))]
-    partial class MatricaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230820141231_Strin_Url_PATH")]
+    partial class Strin_Url_PATH
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
