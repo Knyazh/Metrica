@@ -7,11 +7,8 @@ namespace Metrica1.ViewModels.Employees
     {
         public string UserCode { get; set; }
       
-        public string PIN { get; set; }
-        public string Email { get; set; }
         public string ImageURL { get; set; }
-        public int DepartmentId { get; set; }
-        //public Department Department { get; set; }
+        public Agency Agency { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

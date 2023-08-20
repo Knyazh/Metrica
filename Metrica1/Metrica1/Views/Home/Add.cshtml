@@ -60,14 +60,14 @@
                         <div class="col-md-4">
                             <div class="mb-3">
                                 <label>Category</label>
-                                <select class="form-select" asp-for="DepartmentId">
+                                <select class="form-select" asp-for="AgencyId">
                                     <option disabled>Select the category</option>
-                                   @*  @foreach (var category in Model.Departments)
+                                    @foreach (var category in Model.Agencies)
                                     {
                                         <option value="@category.Id">@category.Name</option>
-                                    } *@
+                                    }
                                 </select>
-                                <span asp-validation-for="DepartmentId" class="invalid-feedback" style="display:block"></span>
+                                <span asp-validation-for="AgencyId" class="invalid-feedback" style="display:block"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
