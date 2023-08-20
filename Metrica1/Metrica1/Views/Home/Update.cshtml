@@ -1,14 +1,15 @@
-﻿@model ProductUpdateViewModel
+﻿@model EmployeeUpdateViewModel
+
 <div class="row">
     <div class="col-sm-12">
         <div class="page-title-box">
             <div class="float-end">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a asp-controller="product" asp-action="index">Products</a></li>
-                    <li class="breadcrumb-item active">Edit Product</li>
+                    <li class="breadcrumb-item active">Update Employee</li>
                 </ol>
             </div>
-            <h4 class="page-title">Add product</h4>
+            <h4 class="page-title">Update Employee</h4>
         </div><!--end page-title-box-->
     </div><!--end col-->
 </div>
@@ -17,8 +18,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <div asp-validation-summary="ModelOnly"></div>
-                <form enctype="multipart/form-data" smethod="POST" asp-controller="product" asp-action="update" id="submit-form">
+                <form enctype="multipart/form-data" method="POST" asp-controller="home" asp-action="add" id="submit-form">
+                    <div asp-validation-summary="ModelOnly"></div>
                     <div class="row">
                         <div class="col-md-4">
                             <div class="mb-3">
@@ -29,59 +30,62 @@
                         </div>
                         <div class="col-md-4">
                             <div class="mb-3">
-                                <label asp-for="Description"></label>
-                                <input class="form-control" asp-for="Description">
-                                <span asp-validation-for="Description" class="invalid-feedback" style="display:block"></span>
+                                <label asp-for="FatherName"></label>
+                                <input class="form-control" asp-for="FatherName">
+                                <span asp-validation-for="FatherName" class="invalid-feedback" style="display:block"></span>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="mb-3">
-                                <label asp-for="Color"></label>
-                                <input class="form-control" asp-for="Color">
-                                <span asp-validation-for="Color" class="invalid-feedback" style="display:block"></span>
+                                <label asp-for="Surname"></label>
+                                <input class="form-control" asp-for="Surname">
+                                <span asp-validation-for="Surname" class="invalid-feedback" style="display:block"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label asp-for="Email"></label>
+                                <input class="form-control" asp-for="Email">
+                                <span asp-validation-for="Email" class="invalid-feedback" style="display:block"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label asp-for="PIN"></label>
+                                <input class="form-control" asp-for="PIN">
+                                <span asp-validation-for="PIN" class="invalid-feedback" style="display:block"></span>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label asp-for="Size"></label>
-                                <input class="form-control" asp-for="Size">
-                                <span asp-validation-for="Size" class="invalid-feedback" style="display:block"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label asp-for="Price"></label>
-                                <input class="form-control" asp-for="Price">
-                                <span asp-validation-for="Price" class="invalid-feedback" style="display:block"></span>
-                            </div>
-                        </div>
                         <div class="col-md-4">
                             <div class="mb-3">
                                 <label>Category</label>
-                                <select class="form-select" asp-for="CategoryId">
+                                <select class="form-select" asp-for="DepartmentId">
                                     <option disabled>Select the category</option>
-                                    @foreach (var category in Model.Categories)
+                                  @*   @foreach (var category in Model.Departments)
                                     {
                                         <option value="@category.Id">@category.Name</option>
-                                    }
+                                    } *@
                                 </select>
-                                <span asp-validation-for="CategoryId" class="invalid-feedback" style="display:block"></span>
+                                <span asp-validation-for="DepartmentId" class="invalid-feedback" style="display:block"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label>Employee's photo</label>
+                                    <input type="file" asp-for="Image" class="form-control">
+                                    <span asp-validation-for="Image" class="invalid-feedback" style="display:block"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="border:1px solid black;">
+                                <div class="mb-3">
+                                    <label class="text-danger">Employee's previous photo</label>
+                                    <img src="~/uploads/@Model.ImageURL" style="width:100%; height:200px;" />
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label>Product's image</label>
-                                <input type="file" asp-for="Image" class="form-control">
-                                <span asp-validation-for="Image" class="invalid-feedback" style="display:block"></span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <img src="~/admin/uploads/images/@Model.CurrentFileName" />
-                            </div>
-                        </div>
                     </div>
                 </form>
             </div>

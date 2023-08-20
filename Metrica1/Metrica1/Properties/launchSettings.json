@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Metrica1": {
+    "Metrica": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

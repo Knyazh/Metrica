@@ -1,4 +1,4 @@
-namespace Metrica1
+namespace Metrica
 {
     public class Program
     {
